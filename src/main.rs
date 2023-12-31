@@ -24,6 +24,7 @@ fn main() -> io::Result<()> {
             write_string(&pswd);
             LeftButton.press();
             LeftButton.release();
+            sleep(Duration::from_millis(10));
         }
     });
 
@@ -44,7 +45,7 @@ fn write_string(s: &str) {
         if let Some(&key) = map_keys.get(&c) {
             key.press();
             key.release();
-            sleep(Duration::from_millis(10));
+            sleep(Duration::from_millis(1));
         }
     }
 }
